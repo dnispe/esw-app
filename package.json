@@ -2,22 +2,25 @@
   "name": "esw-app",
   "version": "1.0.0",
   "description": "Aplicação em node.js para atender ao projeto de software da disciplina de Engenharia de Sofware do Curso de Pós-Gradução do IFSudeste",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dnispe/esw-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dênis Pereira",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dnispe/esw-app/issues"
   },
   "homepage": "https://github.com/dnispe/esw-app#readme",
   "dependencies": {
-    "express": "^5.1.0"
-  }
+    "express": "^5.1.0",
+    "ejs": "^3.1.9",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {}
 }

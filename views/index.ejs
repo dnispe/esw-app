@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dnis - ticket fácil</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>🎟️ Venda de Ingressos</h1>
+        <h2>Escolha um evento:</h2>
+            <ul>
+                <% eventos.forEach(evento => { %>
+            <li>
+                <form action="/pagamento" method="POST">
+                    <input type="hidden" name="eventoId" value="<%= evento.id %>">
+                    <strong><%= evento.nome %></strong> - <%= evento.local %>
+                    <button type="submit">Comprar</button>
+                </form>
+            </li>
+                <% }) %>
+            </ul>
+</body>
+</html>
