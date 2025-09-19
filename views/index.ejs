@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>dnis - ticket fácil</title>
-    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="css/style.css"><!-- CSS PERSONALIZADO -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
+    <!-- INICIO - MENU -->
+    <nav id="navbar-example2" class="navbar custom-navbar fixed-top px-3 mb-3" style="background-color: var(--laranja);" data-bs-theme="light">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="Logo Dnis" class="img-fluid me-2" style="height: 40px;">
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contato">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#agenda">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- FIM - MENU -->
+
+    <img src="./img/festival.png" class="d-block" alt="..." style="width: 100%;">
+    <div class="container p-3">
+        <hr>
+        <h4 id="evtdestaque" class="p-3 text-custom-titulo">Eventos em destaque</h4>
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+            <% eventos.forEach(evento => { %>
+            <form action="/pagamento" method="POST">
+                <input type="hidden" name="eventoId" value="<%= evento.id %>">
+                <div class="col d-flex">
+                    <div class="card">
+                        <img src="./img/ROBOBIT.png" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title card-title-custom">
+                                <a href="#" class="text-decoration-none text-reset">
+                                    <strong><%= evento.nome %></strong><br>
+
+                                </a>
+                            </h5>
+                            <%= evento.local %>
+                            <p class="card-text card-text-custom">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="submit">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <% }) %>
+        </div>
+    </div>
+
     <h1>🎟️ Venda de Ingressos</h1>
         <h2>Escolha um evento:</h2>
             <ul>
@@ -20,5 +74,27 @@
             </li>
                 <% }) %>
             </ul>
+
+
+    <footer class="custom-bg custom-texto text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-2">#InovaçãoQueTransforma | 2025 | INOVAÇÃO</p>
+
+            <div>
+                <a href="https://api.whatsapp.com/message/Y2KA6D3H44FGJ1" target="_blank" class="me-3 text-decoration-none text-reset link-custom">
+                    <i class="bi bi-whatsapp"></i> Whatsapp
+                </a>
+                <a href="https://www.instagram.com/dnis_treinamentos/" target="_blank" class="me-3 text-decoration-none text-reset link-custom">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://www.youtube.com/@dnistreinamentos" target="_blank" class="me-3 text-decoration-none text-reset link-custom">
+                    <i class="bi bi-youtube"></i> YouTube
+                </a>
+                <a href="https://www.linkedin.com/in/dnis/" target="_blank" class="me-3 text-decoration-none text-reset link-custom">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
