@@ -1,0 +1,101 @@
+:root {
+    --azul-escuro: #0324a1;
+    --laranja: #FF6F00;
+    --fundo-preto: #000000;
+    --cinza-fundo: #ececec;
+    --cinza-texto: #4a4a4a;
+    --branco: #ffffff;
+}
+
+body {
+    padding-top: 3%; /* Compensa a altura do navbar fixo */
+    background-color: var(--cinza-fundo) !important;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: var(--cinza-texto) !important; /* cor personalizada (amarelo) */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffffff !important; /* branco no hover */
+    font-weight: bold !important;
+
+}
+
+.custom-bg{
+    background-color: var(--laranja) !important;
+}
+
+.custom-texto{
+    color: var(--cinza-texto) !important;
+}
+
+.footer a {
+    text-decoration: none !important;
+    color: var(--cinza-texto) !important;
+}
+
+.footer a:hover {
+    text-decoration: underline !important;
+    color: #ffffff !important;
+}
+
+.link-padding-custom {
+    padding-top: 5rem !important;
+}
+
+.text-custom-justify {
+    text-align: justify !important;
+}
+
+.text-custom-titulo {
+    text-align: center !important;
+    color: var(--laranja) !important;
+}
+
+.card-bg-custom {
+    background-color: var(--cinza-fundo) !important;
+    border-color: var(--cinza-fundo) !important;
+}
+
+.card-title-custom {
+    color: var(--laranja) !important;
+}
+
+.card-text-custom {
+    color: var(--cinza-texto) !important;
+}
+
+.card-title-custom:hover {
+    color: var(--cinza-texto) !important;
+    font-weight: bold !important;
+}
+
+.p-custom{
+    color: var(--cinza-texto) !important;
+}
+
+.btn-custom {
+    background-color: var(--laranja) !important;
+    color: var(--cinza-texto) !important;
+    border-radius: 5px !important;
+    height: 45px !important;
+}
+
+button.btn:hover {
+    background-color: #e67e00 !important;
+    font-weight: bold !important;
+    color: #ffffff !important; /* branco no hover */
+}
+
+
+.link-custom:hover {
+    color: #ffffff !important; /* branco no hover */
+    font-weight: bold !important;
+}
+
+.card-header-custom{
+    background-color: var(--laranja) !important;
+    color: var(--cinza-texto) !important;
+}
